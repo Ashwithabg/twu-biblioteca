@@ -53,14 +53,14 @@ public class TestBookLibrary {
         return new BookLibrary(books);
     }
     @Test
-    public void checkTheMethodCheckOutBooksWithReturnBookForTrueCondition(){
+    public void CheckOutTwoBookAndReturnHJ1(){
         BookLibrary bookLibrary = getBookLister();
         bookLibrary.isTheDesiredBookAvailable("HJ1");
         bookLibrary.isTheDesiredBookAvailable("CJ1");
         assertEquals(bookLibrary.returnedBookValidityCheck("HJ1"),true);
     }
     @Test
-    public void checkTheMethodCheckOutBooksWithReturnBookForFalseCondition(){
+    public void CheckOutTwoBooksAndReturnOne(){
         BookLibrary bookLibrary = getBookLister();
         bookLibrary.isTheDesiredBookAvailable("HJ1");
         bookLibrary.isTheDesiredBookAvailable("CJ1");
@@ -68,7 +68,7 @@ public class TestBookLibrary {
     }
 
     @Test
-    public void checkTheMethodCheckOutBookWithReturnBooksForFalseCondition(){
+    public void checkOutAndReturnHJ1Book(){
         BookLibrary bookLibrary = getBookLister();
         bookLibrary.isTheDesiredBookAvailable("HJ1");
         bookLibrary.returnedBookValidityCheck("HJ1");
@@ -76,13 +76,13 @@ public class TestBookLibrary {
     }
 
     @Test
-    public void checkTheMethodCheckOutBooksWithReturnBooksForFalseCondition(){
+    public void CheckOutAndReturnCJ1Book(){
         BookLibrary bookLibrary = getBookLister();
         bookLibrary.isTheDesiredBookAvailable("CJ1");
         assertEquals(bookLibrary.isTheDesiredBookAvailable("CJ1"),false);
     }
     @Test
-    public void checkTheMethodThreeCheckOutBookWithTwoReturnBookForTrueCondition(){
+    public void ChecKOutAndReturnTwoBooks(){
         BookLibrary bookLibrary = getBookLister();
         bookLibrary.isTheDesiredBookAvailable("HJ1");
         bookLibrary.returnedBookValidityCheck("HJ1");
@@ -91,12 +91,29 @@ public class TestBookLibrary {
         assertEquals(bookLibrary.isTheDesiredBookAvailable("HJ1"),true);
     }
     @Test
-    public void checkTheMethodThreeCheckOutBookWithOneReturnBookForTrueCondition(){
+    public void checkOutTheBookThatIsCheckedOut(){
         BookLibrary bookLibrary = getBookLister();
         bookLibrary.isTheDesiredBookAvailable("HJ1");
         bookLibrary.returnedBookValidityCheck("HJ1");
         bookLibrary.isTheDesiredBookAvailable("HJ1");
         assertEquals(bookLibrary.isTheDesiredBookAvailable("HJ1"),false);
+    }
+
+
+    @Test
+    public void returnTheSameBookAfterTheReturn(){
+        BookLibrary bookLibrary = getBookLister();
+        bookLibrary.isTheDesiredBookAvailable("HJ1");
+        bookLibrary.returnedBookValidityCheck("HJ1");
+        assertEquals(bookLibrary.returnedBookValidityCheck("HJ1"),false);
+    }
+
+    @Test
+    public void checkOutSameBookAfterTheReturn(){
+        BookLibrary bookLibrary = getBookLister();
+        assertEquals(bookLibrary.isTheDesiredBookAvailable("CJ1"),true);
+        assertEquals(bookLibrary.returnedBookValidityCheck("CJ1"),true);
+        assertEquals(bookLibrary.isTheDesiredBookAvailable("CJ1"),true);
     }
 
 

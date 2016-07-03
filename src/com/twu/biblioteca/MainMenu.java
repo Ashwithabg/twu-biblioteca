@@ -11,7 +11,6 @@ import static java.lang.System.exit;
 public class MainMenu {
     private ArrayList<String> listOptions;
 
-
     public MainMenu(ArrayList<String> listOptions) {
         this.listOptions = listOptions;
     }
@@ -25,10 +24,6 @@ public class MainMenu {
 
     public void selectTheOption() {
         displayOptions();
-        callSwitchCases();
-    }
-
-    private void callSwitchCases() {
         switch (getUserOption()){
             case 1:displayBookOptions();
                 break;
@@ -38,6 +33,8 @@ public class MainMenu {
                 break;
         }
     }
+
+
 
     private void displayBookOptions() {
         BookLibrary bookLibrary =new BookLibrary(makeBookList());
