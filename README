@@ -26,4 +26,34 @@ Instructions to open your code in Intellij
 1. Go to File -> Open (or Open Project)
 2. Select the directory containing the code
 DONE !
+----------------------------------------------------------------
+        FIRST RELEASE OF BIBLIOTECA:
+        ===========================
+----------------------------------------------------------------
+1.display welcome message
+2.display list of books
+3.display menu list
+4.print error message for invalid menu option
+5.option to quit
+6.option to checkout books
+7.display successful checkout message
+8.display unsuccessful checkout message
+9.option to return book
+10.display successful book return message
+11.display unscuccessful book return message
 
+
+CLASSES:
+BibliotecaTestDrive
+Book
+BookLibrary
+MenuList
+-----------------------------------------------------------
+        SECOND RELEASE OF BIBLIOTECA
+        ============================
+-----------------------------------------------------------
+1.list movie
+2.checkout and return movie
+3.user login
+4.user account information
+------------------------------------------------------------
